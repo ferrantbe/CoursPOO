@@ -7,19 +7,16 @@ public class Pascal {
             return null;
         }
 
-        int [][] triangle = new int[nrOfLines][];
-        triangle[0] = new int[1];
-        triangle[0][0] = 1;
+        int[][] triangle = new int[nrOfLines + 1][];
 
-        if (nrOfLines > 1) {
-            for (int line = 1; line < nrOfLines; line++) {
-                triangle[line] = new int [line + 1];
-                triangle[line][0] = 1;
-                triangle[line][line] = 1;
-                for (int cell = 1; cell < line; cell++)
-                    triangle[line][cell] = triangle[line - 1][cell - 1] + triangle[line - 1][cell];
-            }
+        for (int line = 0; line <= nrOfLines; line++) {
+            triangle[line] = new int[line + 1];
+            triangle[line][0] = 1;
+            triangle[line][line] = 1;
+            for (int cell = 1; cell < line; cell++)
+                triangle[line][cell] = triangle[line - 1][cell - 1] + triangle[line - 1][cell];
         }
+
 
         return triangle;
     }

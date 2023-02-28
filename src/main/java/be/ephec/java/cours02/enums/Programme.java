@@ -35,19 +35,9 @@ public class Programme {
     public static void onFaitQuoi(DayOfWeek today) {
 
         switch (today) {
-            case MONDAY:
-            case TUESDAY:
-            case WEDNESDAY:
-            case THURSDAY:
-                System.out.println("On bosse");
-                break;
-            case FRIDAY:
-                System.out.println("Presque...");
-                break;
-            case SATURDAY:
-            case SUNDAY:
-                System.out.println("On se repose.");
-
+            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY -> System.out.println("On bosse");
+            case FRIDAY -> System.out.println("Presque...");
+            case SATURDAY, SUNDAY -> System.out.println("On se repose.");
         }
 
     }
