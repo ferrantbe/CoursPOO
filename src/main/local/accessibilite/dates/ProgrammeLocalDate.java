@@ -1,4 +1,4 @@
-package be.ephec.java.cours02.accessibilite.dates;
+package accessibilite.dates;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

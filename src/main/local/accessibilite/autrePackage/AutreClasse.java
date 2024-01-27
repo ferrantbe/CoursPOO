@@ -1,4 +1,4 @@
-package be.ephec.java.cours02.accessibilite.autrePackage;
+package accessibilite.autrePackage;
 
 import be.ephec.java.cours02.accessibilite.monPackage.MaClasse;
 

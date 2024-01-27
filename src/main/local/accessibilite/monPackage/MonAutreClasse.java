@@ -1,6 +1,6 @@
-package be.ephec.java.cours02.accessibilite.monPackage;
+package accessibilite.monPackage;
 
-public class MaSousClasse extends MaClasse {
+public class MonAutreClasse {
     public static void main(String[] args) {
         MaClasse o = new MaClasse();
         appelleMethodePublique(o);
@@ -16,7 +16,7 @@ public class MaSousClasse extends MaClasse {
         o.methodeProtected();
     }
     private static void appelleMethodeDefaut(MaClasse o) {
-o.methodeDefaut();
+        o.methodeDefaut();
     }
     private static void appelleMethodePrivee(MaClasse o) {
         // o.methodePrivee(); // Méthode non visible

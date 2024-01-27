@@ -1,4 +1,4 @@
-package be.ephec.java.cours02.accessibilite.monPackage;
+package accessibilite.monPackage;
 
 public class MaClasse {
 

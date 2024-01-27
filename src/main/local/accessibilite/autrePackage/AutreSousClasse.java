@@ -1,10 +1,15 @@
-package be.ephec.java.cours02.accessibilite.monPackage;
+package accessibilite.autrePackage;
 
-public class MonAutreClasse {
+import be.ephec.java.cours02.accessibilite.monPackage.MaClasse;
+
+public class AutreSousClasse extends MaClasse {
+
     public static void main(String[] args) {
         MaClasse o = new MaClasse();
+        AutreSousClasse asc = new AutreSousClasse();
         appelleMethodePublique(o);
         appelleMethodeProtected(o);
+        asc.appelleProtectedHeritage(o);
         appelleMethodeDefaut(o);
         appelleMethodePrivee(o);
     }
@@ -13,12 +18,17 @@ public class MonAutreClasse {
         o.methodePublique();
     }
     private static void appelleMethodeProtected(MaClasse o) {
-        o.methodeProtected();
+        // o.methodeProtected(); // Méthode non visible
     }
     private static void appelleMethodeDefaut(MaClasse o) {
-        o.methodeDefaut();
+        // o.methodeDefaut(); // Méthode non visible
     }
     private static void appelleMethodePrivee(MaClasse o) {
         // o.methodePrivee(); // Méthode non visible
+    }
+
+    public void appelleProtectedHeritage(MaClasse o) {
+        // o.methodeProtected(); // Méthode non visible
+        super.methodeProtected(); // possible dans le cadre de l'héritage
     }
 }
