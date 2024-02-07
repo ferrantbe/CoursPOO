@@ -1,8 +1,8 @@
 package be.ephec.java.cours02.jeuDeCartes;
 
 public class Carte {
-    private Couleur couleur;
-    private Valeur valeur;
+    private final Couleur couleur;
+    private final Valeur valeur;
 
     public Carte(Couleur couleur, Valeur valeur) {
         this.couleur = couleur;
