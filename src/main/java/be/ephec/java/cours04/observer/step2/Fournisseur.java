@@ -1,23 +1,24 @@
-package be.ephec.java.cours03.observer.step1;
+package be.ephec.java.cours04.observer.step2;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class Fournisseur {
-    Set<Client> subscribers = new HashSet<>();
+    Set<Subscriber> subscribers = new HashSet<>();
 
-    public void addSubscriber(Client client) {
+    public void addSubscriber(Subscriber client) {
         subscribers.add(client);
     }
 
-    public void removeSubscriber(Client client) {
+    public void removeSubscriber(
+            Subscriber client) {
         subscribers.remove(client);
     }
 
     private void informSubscribers() {
         System.out.println("Fournisseur - J'informe mes subscribers");
-        for (Client client : subscribers) {
-            client.update();
+        for (Subscriber subscriber : subscribers) {
+            subscriber.update();
         }
     }
 

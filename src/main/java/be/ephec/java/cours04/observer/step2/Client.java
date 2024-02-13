@@ -1,15 +1,16 @@
-package be.ephec.java.cours03.observer.step1;
+package be.ephec.java.cours04.observer.step2;
 
-
-public class Client {
+public class Client implements Subscriber {
     private String name;
 
     public Client(String name) {
         this.name = name;
     }
 
+    @Override
     public void update() {
-        System.out.printf("Client (%s) - Enfin, je vais acheter le produit\n", this.name);
+        System.out.printf("Client (%s) - Enfin, je vais acheter le produit\n",
+                this.name);
     }
 
     public void jeMAbonne(Fournisseur fournisseur) {
@@ -20,4 +21,6 @@ public class Client {
 
         fournisseur.removeSubscriber(this);
     }
+
+
 }

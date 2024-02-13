@@ -1,4 +1,4 @@
-package be.ephec.java.cours03.observer.step1;
+package be.ephec.java.cours04.observer.step1;
 
 public class Programme {
     public static void main(String[] args) {
