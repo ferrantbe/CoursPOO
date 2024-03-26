@@ -10,7 +10,7 @@ public class Programme {
 
         // C<T'> n'hérite pas de C<T> si T' hérite de T
         // List<VSP> n'hérite pas de List<V>, même si VSP hérite de V
-        listVoit = listVoitSP;
+        //listVoit = listVoitSP;
 
 
         List<? extends Voiture> listeDeVoitures = new ArrayList<>();
