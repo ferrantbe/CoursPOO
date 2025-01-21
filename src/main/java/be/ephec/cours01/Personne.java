@@ -19,6 +19,7 @@ public class Personne {
 
     public int computeAge(int year) {
         return year - dateNaissance;
+
     }
 
     public void display() {
